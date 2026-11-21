@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exhibit not found — Krist</title>
+  <meta name="description" content="This wing of the web museum is either closed or never existed.">
+  <meta name="theme-color" content="#F4EFE4">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .error {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 8rem var(--gutter) 4rem;
+      max-width: var(--maxw);
+      margin: 0 auto;
+    }
+    .error__code {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 1rem;
+    }
+    .error__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 600;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      max-width: 18ch;
+    }
+    .error__title em {
+      font-style: italic;
+      color: var(--coral);
+    }
+    .error__note {
+      margin-top: 1.4rem;
+      max-width: 48ch;
+      color: var(--ink-soft);
+      font-size: 1.1rem;
+      line-height: 1.55;
+    }
+    .error__actions {
+      margin-top: 2.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .curator-note {
+      margin-top: 3rem;
+      padding: 1.25rem 1.5rem;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      max-width: 54ch;
+    }
+    .curator-note dt {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 0.4rem;
+    }
+    .curator-note dd {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+  </style>
+</head>
+<body id="top">
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="logo" href="/">krist.</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="error">
+    <p class="error__code">404 — Exhibit not found</p>
+    <h1 class="error__title">This wing is <em>closed</em> or never existed.</h1>
+    <p class="error__note">
+      The piece you're looking for isn't part of the current collection.
+      It may have moved, been archived, or only lived in a sketchbook.
+    </p>
+    <div class="error__actions">
+      <a class="btn btn--primary" href="/">Back to the museum</a>
+      <a class="btn btn--ghost" href="https://github.com/kristb98">GitHub</a>
+    </div>
+
+    <!-- Add any extra context, related works, or a witty curator line here -->
+    <dl class="curator-note">
+      <dt>Curator's note</dt>
+      <dd>Nothing here yet — but every good museum keeps a few empty walls.</dd>
+    </dl>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> Krist — designed &amp; built by hand.</p>
+    <a class="to-top" href="/">Back to the museum <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <script>document.getElementById('year').textContent = String(new Date().getFullYear());</script>
+</body>
+</html>

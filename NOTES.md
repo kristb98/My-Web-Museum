@@ -79,6 +79,7 @@ Everything is driven by the array in `projects.js`. Copy a block, change the fie
 - [x] Host picked: Vercel (static, no build command) — repo `kristb98/spaces`
 - [x] Live at **https://krist-web-museum.vercel.app** (project `krist-web-museum`)
 - [x] `NOTES.md` excluded from deploys via `.vercelignore`
+- [x] Custom `404.html` added for missing exhibits
 - [ ] Point the domain, add HTTPS
 - [ ] Post-launch: check links, check mobile Safari, submit to search
 
