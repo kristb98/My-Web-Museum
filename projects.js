@@ -62,10 +62,16 @@ window.KRIST_PROJECTS = [
   },
   {
     title: "Iq-Math",
+    year: "2026",
+    blurb: "An interactive math playground: factorials, tetration, E=mc² and tesseracts, with daily challenges, boss battles, a mistake journal and nine badges to collect.",
+    tags: ["web", "play"],
     href: "https://iq-math-krist.vercel.app/",
-    tags: ["web"],
+    medium: "Interactive learning site · web app",
+    role: "Design & code",
+    stack: "HTML · CSS · vanilla JavaScript",
     status: "live",
     art: 5,
-    colors: ["#d9ff43", "#131110"]
+    colors: ["#d9ff43", "#131110"],
+    image: "images/iq-math.jpg"
   }
 ];

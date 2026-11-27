@@ -59,7 +59,7 @@ Everything is driven by the array in `projects.js`. Copy a block, change the fie
 ### Content (blocking launch)
 - [x] Add the rest of Krist's projects (Neon Dodgers + Geometric Rhythm are in)
 - [x] Add "My Web Museum" itself as a third exhibit (so the filters have something to do)
-- [x] Add "Iq-Math" → https://iq-math-krist.vercel.app/ (fourth exhibit)
+- [x] Add "Iq-Math" → https://iq-math-krist.vercel.app/ (fourth exhibit — described from the live site, screenshot added)
 - [x] Geometric Rhythm live → https://geometric-rhythm.vercel.app (deployed from the GitHub repo, game served at `/`)
 - [x] Email wired up (assembled in JS, so the address isn't plain text in the HTML)
 - [x] GitHub link → https://github.com/kristb98 (only profile; no repos embedded)
