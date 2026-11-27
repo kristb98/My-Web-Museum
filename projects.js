@@ -29,7 +29,8 @@ window.KRIST_PROJECTS = [
     stack: "HTML · CSS · vanilla JavaScript",
     status: "live",
     art: 1,
-    colors: ["#12121c", "#ff4fd8"]
+    colors: ["#12121c", "#ff4fd8"],
+    image: "images/neon-dodgers.jpg"
   },
   {
     title: "Geometric Rhythm",
@@ -42,6 +43,29 @@ window.KRIST_PROJECTS = [
     stack: "Canvas · Web Audio · vanilla JavaScript",
     status: "live",
     art: 4,
-    colors: ["#ffb7d5", "#2b3bff"]
+    colors: ["#ffb7d5", "#2b3bff"],
+    image: "images/geometric-rhythm.jpg"
+  },
+  {
+    title: "My Web Museum",
+    year: "2026",
+    blurb: "This site — a small, dependency-free portfolio built as a museum, with CSS-only cover art, museum wall labels and zero trackers.",
+    tags: ["web", "product"],
+    href: "https://krist-web-museum.vercel.app",
+    medium: "Portfolio · static site",
+    role: "Design & code",
+    stack: "HTML · CSS · vanilla JavaScript",
+    status: "live",
+    art: 6,
+    colors: ["#f4efe4", "#131110"],
+    image: "images/museum.jpg"
+  },
+  {
+    title: "Iq-Math",
+    href: "https://iq-math-krist.vercel.app/",
+    tags: ["web"],
+    status: "live",
+    art: 5,
+    colors: ["#d9ff43", "#131110"]
   }
 ];

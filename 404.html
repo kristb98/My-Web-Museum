@@ -3,119 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Exhibit not found — Krist</title>
-  <meta name="description" content="This wing of the web museum is either closed or never existed.">
+  <title>Off display — Krist</title>
+  <meta name="description" content="That page isn't on display in the museum. Head back to the collection.">
+  <meta name="robots" content="noindex">
   <meta name="theme-color" content="#F4EFE4">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
 
   <style>
-    .error {
-      min-height: 70vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 8rem var(--gutter) 4rem;
-      max-width: var(--maxw);
-      margin: 0 auto;
+    :root {
+      --paper: #f4efe4;
+      --ink: #131110;
+      --ink-soft: #524b43;
+      --line: rgba(19, 17, 16, 0.16);
+      --lime: #d9ff43;
+      --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+      --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
     }
-    .error__code {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      margin-bottom: 1rem;
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      display: grid;
+      place-items: center;
+      padding: clamp(1.25rem, 5vw, 3rem);
+      -webkit-font-smoothing: antialiased;
     }
-    .error__title {
+    main { max-width: 42rem; text-align: center; }
+    .brand {
+      display: inline-block;
       font-family: var(--font-display);
-      font-size: clamp(2.8rem, 8vw, 5.5rem);
       font-weight: 600;
-      line-height: 1.0;
-      letter-spacing: -0.03em;
-      max-width: 18ch;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 2.5rem;
     }
-    .error__title em {
-      font-style: italic;
-      color: var(--coral);
-    }
-    .error__note {
-      margin-top: 1.4rem;
-      max-width: 48ch;
-      color: var(--ink-soft);
-      font-size: 1.1rem;
-      line-height: 1.55;
-    }
-    .error__actions {
-      margin-top: 2.2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-    .curator-note {
-      margin-top: 3rem;
-      padding: 1.25rem 1.5rem;
-      border: 1px dashed var(--line);
-      border-radius: var(--radius);
-      max-width: 54ch;
-    }
-    .curator-note dt {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
+    .brand span { color: var(--lime); text-shadow: 0 0 1px var(--ink); }
+    .plaque {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--ink-soft);
-      margin-bottom: 0.4rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.4rem 0.9rem;
+      margin-bottom: 1.5rem;
     }
-    .curator-note dd {
-      margin: 0;
-      font-size: 0.95rem;
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2.6rem, 9vw, 4.5rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin: 0 0 1rem;
+    }
+    h1 em { font-style: italic; }
+    p {
       color: var(--ink-soft);
+      font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+      line-height: 1.6;
+      margin: 0 0 2.25rem;
     }
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.5rem;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--paper);
+      font-weight: 500;
+      text-decoration: none;
+      transition: transform 0.25s cubic-bezier(0.22, 0.7, 0.2, 1), background 0.25s;
+    }
+    .btn:hover { background: #000; transform: translateY(-2px); }
+    .btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    footer { margin-top: 3rem; font-size: 0.8rem; color: var(--ink-soft); }
+    @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
   </style>
 </head>
-<body id="top">
-
-  <div class="grain" aria-hidden="true"></div>
-
-  <header class="site-header" id="siteHeader">
-    <a class="logo" href="/">krist.</a>
-    <nav class="nav" aria-label="Primary">
-      <a href="/">Work</a>
-      <a href="/#about">About</a>
-      <a href="/#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main class="error">
-    <p class="error__code">404 — Exhibit not found</p>
-    <h1 class="error__title">This wing is <em>closed</em> or never existed.</h1>
-    <p class="error__note">
-      The piece you're looking for isn't part of the current collection.
-      It may have moved, been archived, or only lived in a sketchbook.
-    </p>
-    <div class="error__actions">
-      <a class="btn btn--primary" href="/">Back to the museum</a>
-      <a class="btn btn--ghost" href="https://github.com/kristb98">GitHub</a>
-    </div>
-
-    <!-- Add any extra context, related works, or a witty curator line here -->
-    <dl class="curator-note">
-      <dt>Curator's note</dt>
-      <dd>Nothing here yet — but every good museum keeps a few empty walls.</dd>
-    </dl>
+<body>
+  <main>
+    <a class="brand" href="/">krist<span>.</span></a>
+    <div><span class="plaque">Exhibit not found · 404</span></div>
+    <h1>Off <em>display.</em></h1>
+    <p>This piece isn't part of the collection — or it's been moved. Head back to the gallery and pick something that is.</p>
+    <a class="btn" href="/">Back to the museum</a>
+    <footer>© <span id="year">2026</span> Krist — no templates, no trackers.</footer>
   </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year">2026</span> Krist — designed &amp; built by hand.</p>
-    <a class="to-top" href="/">Back to the museum <span aria-hidden="true">↑</span></a>
-  </footer>
-
-  <script>document.getElementById('year').textContent = String(new Date().getFullYear());</script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -17,6 +17,13 @@ python3 -m http.server 8000
 | `projects.js` | **The project list — edit this to swap in real work** |
 | `app.js` | Card rendering, museum plaques, filters, scroll reveals, magnetic buttons, copy-email |
 | `favicon.svg` | Little "k." mark |
+| `images/` | Project screenshots (`neon-dodgers.jpg`, `geometric-rhythm.jpg`, `museum.jpg`) |
+| `404.html` | "Off display" page — Vercel serves it automatically |
+| `sitemap.xml` | One-page sitemap |
+| `robots.txt` | Crawl rules + sitemap pointer |
+| `manifest.webmanifest` | PWA manifest — makes the site installable |
+| `sw.js` | Offline cache (network-first, cache fallback) |
+| `icon-192.png`, `icon-512.png` | Install icons (ink tile, lime "k", coral dot) |
 | `.vercelignore` | Keeps `NOTES.md` out of the deploy |
 
 ## Swap in the real projects
@@ -51,25 +58,28 @@ Everything is driven by the array in `projects.js`. Copy a block, change the fie
 
 ### Content (blocking launch)
 - [x] Add the rest of Krist's projects (Neon Dodgers + Geometric Rhythm are in)
+- [x] Add "My Web Museum" itself as a third exhibit (so the filters have something to do)
+- [x] Add "Iq-Math" → https://iq-math-krist.vercel.app/ (fourth exhibit)
 - [x] Geometric Rhythm live → https://geometric-rhythm.vercel.app (deployed from the GitHub repo, game served at `/`)
 - [x] Email wired up (assembled in JS, so the address isn't plain text in the HTML)
 - [x] GitHub link → https://github.com/kristb98 (only profile; no repos embedded)
 - [ ] Confirm the hero headline + lede (About copy is now Krist's own)
-- [ ] Replace "Based in …" with the real city / timezone
-- [ ] Add project screenshots to `images/` and point each project at one
+- [x] Replace "Based in …" with the real city / timezone — set to **Montreal, Canada (Eastern Time)**; correct if wrong
+- [x] Add project screenshots to `images/` and point each project at one
 - [ ] Optional: add a CV / résumé link somewhere in About
 
 ### Design & polish
-- [ ] Add an OG/social share image (1200×630) + `og:image` meta
+- [x] Add an OG/social share image + `og:image` meta (using `images/museum.jpg`, 1280×720)
 - [ ] Check the cover-art variants still look good on real images
 - [ ] Look at the marquee speed on a 27" screen — may want it slower
-- [ ] Add a 404 page (or host-level redirect)
+- [x] Add a 404 page (or host-level redirect) — `404.html`
 - [ ] Optional: dark mode (tokens are already centralised in `:root`)
 
 ### Technical
 - [ ] Run Lighthouse (perf / a11y / best practices / SEO)
 - [ ] Self-host the two fonts or add `font-display: swap` fallback check
-- [ ] Add `sitemap.xml` + `robots.txt`
+- [x] Add `sitemap.xml` + `robots.txt`
+- [x] Make the site installable: `manifest.webmanifest`, 192/512 PNG icons, `sw.js` offline cache
 - [ ] Add analytics *only if wanted* — currently zero trackers
 - [ ] Test keyboard nav: skip link → nav → filters → cards → email copy
 - [ ] Test at 320px, 768px, 1024px, 1440px, 1920px
@@ -79,7 +89,6 @@ Everything is driven by the array in `projects.js`. Copy a block, change the fie
 - [x] Host picked: Vercel (static, no build command) — repo `kristb98/spaces`
 - [x] Live at **https://krist-web-museum.vercel.app** (project `krist-web-museum`)
 - [x] `NOTES.md` excluded from deploys via `.vercelignore`
-- [x] Custom `404.html` added for missing exhibits
 - [ ] Point the domain, add HTTPS
 - [ ] Post-launch: check links, check mobile Safari, submit to search
 

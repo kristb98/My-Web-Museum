@@ -284,4 +284,11 @@
   /* ----------------------------------------------------------------- year */
   var yearEl = $("#year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* --------------------------------------------------------- install / PWA */
+  if ("serviceWorker" in navigator && window.isSecureContext) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw.js").catch(function () {});
+    });
+  }
 })();

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://krist-web-museum.vercel.app/sitemap.xml
